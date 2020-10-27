@@ -50,7 +50,7 @@
                     <li class="hero__text-item">Только безопасные средства уборки</li>
                     <li class="hero__text-item">Гарантия сохранности имущества</li>
                 </ul>
-                <a href="#order__popup" class="button">Заказать уборку</a>
+                <a href="#place__order" class="button scrollto">Заказать уборку</a>
             </div>
         </section>
         <section class="consist">
@@ -320,25 +320,25 @@
         <section class="regis">
             <div class="container">
                 <h2 class="section__title">Оформление заказа уборки</h2>
-                <div class="calc">
+                <div class="calc" id="place__order">
                     <div id="calc-choice" class="calc-choice">
                         <div class="calc__title calc-choice__title">Вы выбрали</div>
                         <div class="calc-choice__row">
-                            <input type="radio" name="apart-type" id="flat" checked value="Квартира">
+                            <input type="radio" name="apart-type" id="flat" checked value="Квартира" data-price="7000">
                             <label for="flat" class="button">Квартира</label>
-                            <input type="radio" name="apart-type" id="house" value="Дом">
+                            <input type="radio" name="apart-type" id="house" value="Дом" data-price="">
                             <label for="house" class="button">Дом</label>
                             <input type="radio" name="apart-type" id="office" value="Офис">
                             <label for="office" class="button">Офис</label>
                         </div>
                         <div class="calc-choice__row">
                             <select name="rooms" id="rooms" class="button">
-                                <option value="1 комнатная">1 комнатная</option>
-                                <option value="2 комнатная" selected="selected">2 комнатная</option>
-                                <option value="3 комнатная">3 комнатная</option>
-                                <option value="4 комнатная">4 комнатная</option>
-                                <option value="5 комнатная">5 комнатная</option>
-                                <option value="Более 5 комнат">Более 5 комнат</option>
+                                <option value="1 комната" data-price="7000">1 комната</option>
+                                <option value="2 комнаты" data-price="9000" selected="selected">2 комнаты</option>
+                                <option value="3 комнаты" data-price="11000">3 комнаты</option>
+                                <!-- <option value="4 комнатная">4 комнатная</option>
+                                <option value="5 комнатная">5 комнатная</option> -->
+                                <option value="Более 3 комнат" data-price="13000">Более 3 комнат</option>
                             </select>
                         </div>
                         <div class="calc-choice__row">
@@ -365,7 +365,7 @@
                         <div class="calc__title calc-options__title" id="options">Дополнительные услуги</div>
                         <div class="wrapper">
                             <div class="calc-options__item">
-                                <input type="checkbox" name="window" id="window" value="Помыть окна">
+                                <input type="checkbox" name="window" id="window" value="Помыть окна" data-price="1500">
                                 <label for="window" class="calc-options__label">
                                     <div class="icon">
                                         <img src="../image/window.svg" alt="">
@@ -375,7 +375,7 @@
                             </div>
 
                             <div class="calc-options__item">
-                                <input type="checkbox" name="glass-window" id="glass-window" value="Помыть витражи">
+                                <input type="checkbox" name="glass-window" id="glass-window" value="Помыть витражи" data-price="5000">
                                 <label for="glass-window" class="calc-options__label">
                                     <div class="icon">
                                         <img src="../image/stained-glass-window.svg" alt="">
@@ -384,7 +384,7 @@
                                 </label>
                             </div>
                             <div class="calc-options__item">
-                                <input type="checkbox" name="fridge" id="fridge" value="Помыть холодильник внутри">
+                                <input type="checkbox" name="fridge" id="fridge" value="Помыть холодильник внутри" data-price="1500">
                                 <label for="fridge" class="calc-options__label">
                                     <div class="icon">
                                         <img src="../image/fridge.svg" alt="">
@@ -402,7 +402,7 @@
                                 </label>
                             </div>
                             <div class="calc-options__item">
-                                <input type="checkbox" name="kitchen-cupboard" id="kitchen-cupboard" value="Убрать внутри кухонных шкафов">
+                                <input type="checkbox" name="kitchen-cupboard" id="kitchen-cupboard" value="Убрать внутри кухонных шкафов" data-price="2000">
                                 <label for="kitchen-cupboard" class="calc-options__label">
                                     <div class="icon">
                                         <img src="../image/outline.svg" alt="">
@@ -411,7 +411,7 @@
                                 </label>
                             </div>
                             <div class="calc-options__item">
-                                <input type="checkbox" name="cupboard" id="cupboard" value="Убрать внутри шкафов">
+                                <input type="checkbox" name="cupboard" id="cupboard" value="Убрать внутри шкафов" data-price="1000">
                                 <label for="cupboard" class="calc-options__label">
                                     <div class="icon">
                                         <img src="../image/7077078.svg" alt="">
@@ -420,7 +420,7 @@
                                 </label>
                             </div>
                             <div class="calc-options__item">
-                                <input type="checkbox" name="chandelier" id="chandelier" value="Помыть люстру">
+                                <input type="checkbox" name="chandelier" id="chandelier" value="Помыть люстру" data-price="1500">
                                 <label for="chandelier" class="calc-options__label">
                                     <div class="icon">
                                         <img src="../image/chandelier.svg" alt="">
@@ -429,7 +429,7 @@
                                 </label>
                             </div>
                             <div class="calc-options__item">
-                                <input type="checkbox" name="microwave-oven" id="microwave-oven" value="Почистить внутри микроволновки">
+                                <input type="checkbox" name="microwave-oven" id="microwave-oven" value="Почистить внутри микроволновки" data-price="800">
                                 <label for="microwave-oven" class="calc-options__label">
                                     <div class="icon">
                                         <img src="../image/microwave-oven.svg" alt="">
@@ -445,7 +445,7 @@
                         <h2 class="title">Ваш заказ</h2>
                         <div class="wrapper">
                             <div class="apart-type">Квартира</div>
-                            <div class="rooms">2 комнатная</div>
+                            <div class="rooms">2 комнаты</div>
                             <div class="type">Стандартная уборка</div>
                             <div class="period">Каждую неделю</div>
                             <hr>
@@ -461,9 +461,9 @@
                             </div>
                         </div>
                         <div class="wrapper">
-                            <div class="price-title">К оплате : <span>9000тг</span></div>
+                            <div class="price-title">К оплате : <span>9000</span> тг</div>
                         </div>
-                        <button class="order__button">Заказать уборку</button>
+                        <a href="#types-popup-modal" class="order__button popup-modal__button">Заказать уборку</a>
                     </div>
                 </div>
             </div>
@@ -493,9 +493,18 @@
             </a>
             <h4 class="modal__title">Заказать уборку</h4>
             <form action="/" method="POST" class="modal__form">
+                
+                <input type="hidden" name="apart-type" value="Квартира">
+                <input type="hidden" name="rooms" value="2 комнаты">
+                <input type="hidden" name="type" value="Стандартная уборка">
+                <input type="hidden" name="period" value="Каждую неделю">
+                <input type="hidden" name="userOrder" value="">
+
                 <input class="modal__input" type="text" name="userName" id="userName__modal" placeholder="Имя">
                 <input class="modal__input" type="tel" name="userPhone" id="userPhone__modal" placeholder="Телефон">
+                
                 <button class="modal__button">Заказать</button>
+
             </form>
         </div>
     </div>

@@ -179,34 +179,59 @@ $(document).ready(function () {
 
 	// Calc
 
-	$(".calc-choice__row input, .calc-choice__row select, .calc-period__row input").click(function () {
+	$(
+		".calc-choice__row input, .calc-choice__row select, .calc-period__row input"
+	).click(function () {
 		if ($(this).attr("name") === "apart-type") {
 			$(".apart-type").text($(this).val());
-		} else if ($(this).attr("name") === "cleaning-type") {
+			$(".modal__form input[name=apart-type]").val($(this).val());
+    } 
+    
+    else if ($(this).attr("name") === "cleaning-type") {
 			$(".type").text($(this).val());
-		} else if ($(this).attr("name") === "period") {
-      $(".period").text($(this).val());
-    } else if ($(this).attr("name") === "rooms") {
-      $(".rooms").text($(this).val());
-    }
-    console.log($(this).val());
-  });
-  
-  $('.calc-options input').click(function() {
-    $('.options__list').empty();
+			$(".modal__form input[name=type]").val($(this).val());
+    } 
+    
+    else if ($(this).attr("name") === "period") {
+			$(".period").text($(this).val());
+			$(".modal__form input[name=period]").val($(this).val());
+    } 
+    
+    else if ($(this).attr("name") === "rooms") {
+			$(".rooms").text($(this).val());
+			$(".modal__form input[name=rooms]").val($(this).val());
+		}
+	});
 
-    var optionsArr = [...document.querySelectorAll('.calc-options input:checked')];
-    if (optionsArr.length === 0) {
-      $('.not-checked').fadeIn(0);
-      $('.checked').fadeOut(0);
-    } else {
-      $('.not-checked').fadeOut(0);
-      $('.checked').fadeIn(0);
-    }
+	$(".calc-options input").click(function () {
+		$(".options__list").empty();
 
-    optionsArr.forEach(function(item) {
-      console.log(item);
-      $('.options__list').append('<li class="options__item">' + $(item).val() + '</li>');
-    })
-  })
+		var optionsArr = [
+			...document.querySelectorAll(".calc-options input:checked"),
+		];
+		if (optionsArr.length === 0) {
+			$(".not-checked").fadeIn(0);
+			$(".checked").fadeOut(0);
+		} else {
+			$(".not-checked").fadeOut(0);
+			$(".checked").fadeIn(0);
+		}
+
+		optionsArr.forEach(function (item) {
+			$(".options__list").append(
+				'<li class="options__item">' + $(item).val() + "</li>"
+			);
+		});
+
+		var order = "";
+
+		$(".popup-modal__button").click(function () {
+			order = "";
+			optionsArr.forEach(function (item) {
+				console.log($(item).val());
+        order = order + $(item).val() + "\n";
+        $('input[name=userOrder]').val(order);
+			});
+		});
+	});
 });
