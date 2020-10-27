@@ -1,0 +1,50 @@
+.reviews {
+  display: block;
+  .card {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid $firstyellow;
+    border-radius: 18px;
+    box-shadow: -6px 7px 25px rgba(0, 0, 0, 0.25);
+    max-width: 320px;
+    width: 100%;
+    height: 360px;
+    margin: 0 auto;
+    &-item {
+      align-items: center;
+      margin: 0 auto;
+      padding: 0 40px;
+      &__title {
+        font-weight: bold;
+        margin-top: 35px;
+        font-size: 18px;
+      }
+      &__text {
+        line-height: 200%;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &-slider {
+    // display: flex;
+    // justify-content: space-between;
+  }
+  &-slide {
+    margin: 30px auto 40px;
+  }
+  .slick {
+    &-slide {
+      &:focus {
+        outline: none;
+      }
+    }
+    // &__prev {
+    //     position: relative;
+    //     display: block;
+    //     width: 25px;
+    //     height: 25px;
+    //     left: 0;
+    // }
+  }
+}

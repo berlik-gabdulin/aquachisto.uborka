@@ -1,0 +1,26 @@
+.footer {
+    background: #232D32;
+    // height: 330px;
+    .container {
+        padding-bottom: 0;
+    }
+    .row {
+        font-size: 18px;
+        color: $light;
+        
+        a {
+            text-decoration: none;
+            color: $light;
+        }
+        &:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+            padding: 61px 0 0;
+            
+        }
+        &:nth-child(2n) {
+            padding: 40px 0 40px;
+            
+        }
+    }
+}

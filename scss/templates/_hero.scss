@@ -1,0 +1,62 @@
+.hero {
+    position: relative;
+    display: block;
+    background: url(../image/bg-main.jpg) no-repeat ;
+    background-size: cover;
+    min-height: 100vh;
+    padding-top: 100px;
+    box-sizing: border-box;
+    &__title {
+        padding-top: 75px;
+        font-size: 48px;
+        font-weight: 900;
+        color: $secondyellow;
+        span {
+            color: $light;
+            font-weight: 600;
+        }
+    }
+    &__text {
+        font-size: 28px;
+        color: $light;
+        line-height: 174%;
+        margin-top: 44px;
+        &-item {
+            position: relative;
+            list-style-type: none;
+            &::before {
+                display: block;
+                position: absolute;
+                content: '';
+                background: url(../image/cheked-light.svg) no-repeat;
+                background-size: contain;
+                color: $light;
+                width: 25px;
+                height: 25px;
+                top: 10px;
+                left: -39px;
+            }
+        }
+    }
+    h1 {
+        margin: 0;
+    }
+    .button {
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        width: 300px;
+        height: 75px;
+        background: $firstyellow;
+        border-radius: 15px;
+        margin-top: 80px;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.27);
+    }
+    a {
+        text-decoration: none;
+        color: $dark;
+    }
+}

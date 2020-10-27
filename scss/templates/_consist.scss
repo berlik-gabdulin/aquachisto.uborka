@@ -1,0 +1,77 @@
+.consist {
+	.wrapper {
+		height: 47px;
+		margin-bottom: 30px;
+		.room {
+			display: flex;
+			justify-content: space-around;
+			width: 100%;
+			max-width: 790px;
+			margin: 0 auto;
+			font-size: 24px;
+			&__item {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: $dark;
+				min-width: 162px;
+				padding: 5px 30px;
+				border: 2px solid transparent;
+				box-sizing: border-box;
+			}
+			input {
+				display: none;
+				&:checked + label {
+					border-radius: 55px;
+					border: 2px solid $firstyellow;
+					transition: 0.15s;
+					font-weight: 700;
+				}
+			}
+			label {
+				cursor: pointer;
+			}
+		}
+	}
+	&-slide__text {
+		margin: 0 auto;
+		padding-left: 80px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 160%;
+		width: 100%;
+		max-width: 451px;
+		box-sizing: border-box;
+		li {
+			position: relative;
+			display: block;
+			list-style-type: none;
+
+			&::before {
+				position: absolute;
+				display: block;
+				content: "";
+				background: url(../image/cheked.svg) no-repeat;
+				background-size: contain;
+				width: 25px;
+				height: 25px;
+				color: $dark;
+				left: -31px;
+				top: 0;
+			}
+		}
+	}
+	img {
+		max-width: 741px;
+		width: 100%;
+		border-radius: 18px;
+	}
+	.slide-card {
+		max-width: 1280px;
+		width: 100%;
+		display: flex;
+	}
+}

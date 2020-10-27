@@ -1,0 +1,821 @@
+@media only screen and (max-width: 1540px) {
+	.section__title {
+		font-size: 32px;
+	}
+	.container {
+		max-width: 1200px;
+		width: 100%;
+	}
+	.header {
+		.container {
+			margin-top: 30px;
+		}
+		.nav__link {
+			font-size: 20px;
+		}
+	}
+	.hero {
+		&__title {
+			font-size: 44px;
+			padding-top: 44px;
+		}
+		&__text {
+			font-size: 24px;
+			&-item {
+				&::before {
+					top: 5px;
+				}
+			}
+		}
+		.container {
+			margin-top: 60px;
+		}
+		.button {
+			width: 250px;
+			font-size: 20px;
+			margin-top: 60px;
+		}
+	}
+	.consist {
+		.room__item {
+			font-size: 20px;
+		}
+		&-slide__text {
+			font-size: 20px;
+		}
+		img {
+			max-width: 700px;
+			width: 100%;
+		}
+	}
+	.about {
+		.card {
+			padding-bottom: 45px;
+			&-info {
+				&__title {
+					font-size: 22px;
+				}
+				&__text {
+					font-size: 18px;
+				}
+			}
+			img {
+				width: 70px;
+			}
+		}
+	}
+	.types {
+		.card {
+			max-width: 290px;
+			width: 100%;
+			height: 405px;
+			&-item {
+				&__title {
+					font-size: 20px;
+				}
+				&__price {
+					font-size: 16px;
+				}
+				&__text {
+					margin-top: 23px;
+				}
+			}
+			.button {
+				font-size: 16px;
+				width: 160px;
+				height: 42px;
+			}
+		}
+	}
+	.hww {
+		.card-item {
+			&__title {
+				font-size: 22px;
+			}
+			&__text {
+				font-size: 16px;
+			}
+		}
+	}
+	.footer {
+		font-size: 15px;
+		&:nth-child(2n) {
+			font-size: 14px;
+		}
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	.header {
+		.nav__list {
+			padding-inline-start: 0;
+		}
+	}
+	.types {
+		.card {
+			max-width: 280px;
+			width: 100%;
+		}
+	}
+}
+@media only screen and (max-width: 1200px) {
+	.regis {
+		.calc {
+			display: block;
+			margin: 0 auto;
+			max-width: 750px;
+			width: 100%;
+			&-options {
+				.wrapper {
+					// justify-content: center;
+				}
+			}
+		}
+		.sidebar {
+			box-shadow: none;
+			display: block;
+			margin: 0 auto;
+			width: 100%;
+			max-width: 800px;
+			height: 545px;
+			.order {
+				&__button {
+					margin-top: 50px;
+					max-width: 270px;
+					width: 100%;
+					height: 50px;
+				}
+				hr {
+					max-width: 600px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.section__title {
+		font-size: 28px;
+		// margin-top: 70px;
+	}
+	.header {
+		.nav {
+			&__link {
+				font-size: 18px;
+			}
+		}
+	}
+	.hero {
+		&__title {
+			font-size: 40px;
+			span {
+				font-size: 38px;
+			}
+		}
+		&__text {
+			font-size: 20px;
+			&-item {
+				&::before {
+					left: -33px;
+				}
+			}
+		}
+		.button {
+			width: 200px;
+			height: 54px;
+			font-size: 16px;
+		}
+	}
+	.consist {
+		&-slide {
+			&__text {
+				font-size: 18px;
+				li {
+					&::before {
+						width: 20px;
+						height: 20px;
+						top: 2px;
+						left: -26px;
+					}
+				}
+			}
+		}
+	}
+	.about {
+		.card-info {
+			&__title {
+				font-size: 20px;
+			}
+			&__text {
+				font-size: 16px;
+			}
+		}
+	}
+	.types {
+		.card {
+			max-width: 250px;
+			width: 100%;
+			height: 340px;
+			&-item {
+				&__title {
+					font-size: 18px;
+					margin-top: 23px;
+				}
+				&__text {
+					font-size: 13px;
+					margin-top: 18px;
+					margin-bottom: 0;
+					line-height: 167%;
+				}
+				&__info {
+					font-size: 14px;
+				}
+				&__price {
+					font-size: 15px;
+				}
+				&__button {
+					font-size: 14px;
+					width: 150px;
+					height: 35px;
+					font-weight: 800;
+					border-radius: 14px;
+				}
+			}
+		}
+	}
+	.hww {
+		background-position: 35% 65%;
+		max-height: 100%;
+		.card {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 0;
+			&-item {
+				max-width: 240px;
+				margin-top: 20px;
+				img {
+					width: 26px;
+					transform: rotate(90deg);
+				}
+				&__title {
+					font-size: 20px;
+				}
+				&__text {
+					font-size: 15px;
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	.reviews {
+		.card {
+			max-width: 288px;
+			width: 100%;
+			&-item {
+				&_title {
+					font-size: 16px;
+				}
+				&__text {
+					font-size: 13px;
+				}
+			}
+		}
+	}
+	.discount {
+		.section {
+			&__title {
+				font-size: 28px;
+			}
+			&__text {
+				font-size: 20px;
+				span {
+					font-size: 28px;
+				}
+			}
+		}
+		&__form {
+			max-width: 270px;
+			.button {
+				font-size: 16px;
+			}
+		}
+	}
+	.regis {
+		.section__title {
+			margin-bottom: 40px;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.calc {
+			&__title {
+				font-size: 22px;
+			}
+			&-choice {
+				&__row {
+					.button {
+						font-size: 15px;
+						max-width: 200px;
+						padding: 6px;
+					}
+				}
+			}
+			&-period {
+				&__row {
+					font-size: 16px;
+				}
+			}
+			&-options {
+				&__item {
+					height: 178px;
+					.icon {
+						width: 125px;
+						height: 125px;
+						img {
+							width: 70px;
+							height: 70px;
+						}
+					}
+				}
+			}
+		}
+		.sidebar {
+			.order {
+				.wrapper {
+					font-size: 16px;
+					.price-title {
+						font-size: 22px;
+					}
+				}
+				&__button {
+					max-width: 285px;
+					width: 100%;
+					height: 50px;
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 991px) {
+	.header {
+		.container {
+			padding-bottom: 0;
+		}
+	}
+	.hero {
+		min-height: auto;
+		&__title {
+			padding-top: 0;
+		}
+		.button {
+			margin-top: 40px;
+			width: 180px;
+			height: 50px;
+			font-size: 15px;
+		}
+	}
+	.consist {
+		.slide-card {
+			display: flex;
+			flex-direction: column;
+		}
+		&-slide {
+			&__img {
+				margin: 0 auto;
+				max-width: 600px;
+			}
+			&__text {
+				padding-left: 40px;
+				margin-top: 30px;
+			}
+		}
+	}
+	.hww {
+		.card {
+			&-item {
+				&__title {
+					font-size: 18px;
+				}
+				img {
+					width: 20px;
+				}
+			}
+		}
+	}
+	.discount {
+		.section__title {
+			margin-bottom: 15px;
+		}
+		&__form {
+			padding-top: 35px;
+			&-input {
+				height: 41px;
+			}
+			.button {
+				height: 41px;
+			}
+		}
+	}
+	.modal {
+		max-width: 359px;
+		width: 100%;
+		height: 329px;
+		&__title {
+			font-size: 22px;
+		}
+		&__input {
+			max-width: 255px;
+			width: 100%;
+			height: 41px;
+		}
+		&__button {
+			max-width: 224px;
+			width: 100%;
+			height: 43px;
+		}
+	}
+	.regis {
+		.calc {
+			&__title {
+				padding: 40px 0 20px;
+			}
+			&-options {
+				&__item {
+					.icon {
+						width: 115px;
+						height: 115px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	section {
+		padding: 50px 0;
+	}
+	.section {
+		&__title {
+			font-size: 26px;
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+	}
+
+	.header {
+		&-nav {
+			.logo {
+				img {
+					max-width: 110px;
+				}
+			}
+		}
+		.nav {
+			&__link {
+				font-size: 16px;
+			}
+		}
+	}
+	.hero {
+		&__title {
+			font-size: 37px;
+			span {
+				font-size: 37px;
+			}
+		}
+		&__text {
+			font-size: 18px;
+			&-item {
+				&::before {
+					top: 0;
+					height: 20px;
+					width: 20px;
+					left: -28px;
+				}
+			}
+		}
+	}
+	.consist {
+		.wrapper {
+			.room {
+				&__item {
+					padding: 5px 10px;
+					font-size: 18px;
+					min-width: 140px;
+				}
+			}
+		}
+		&-slide {
+			&__text {
+				font-size: 16px;
+				li {
+					&::before {
+						top: 0;
+					}
+				}
+			}
+		}
+		img {
+			max-width: 440px;
+		}
+	}
+	.about {
+		.card {
+			// padding-bottom: 25px;
+			img {
+				width: 60px;
+			}
+			&-info {
+				margin-left: 15px;
+			}
+		}
+	}
+	.regis {
+		.calc {
+			&__title {
+				text-align: center;
+			}
+			&-choice {
+				&__row {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					.button {
+						max-width: 400px;
+						margin-bottom: 12px;
+						&:nth-child(4) {
+							padding-right: 5px;
+						}
+					}
+				}
+			}
+			&-period {
+				&__row {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+				&__item {
+					max-width: 400px;
+					width: 100%;
+					margin-bottom: 12px;
+					padding: 0;
+				}
+			}
+			&-options {
+				.wrapper {
+					flex-wrap: wrap;
+				}
+				&__item {
+					margin: 0 0 20px;
+					.icon {
+						width: 100px;
+						height: 100px;
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
+	.footer {
+		.row {
+			&:nth-child(1) {
+				display: none;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 635px) {
+	.section__title {
+		font-size: 20px;
+	}
+	.header {
+		&-nav {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.nav {
+			width: auto;
+			&__list {
+				flex-wrap: wrap;
+				max-width: 350px;
+				justify-content: flex-start;
+			}
+			&__item {
+				display: none;
+				&:nth-child(3) {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	.hero {
+		&__title {
+			font-size: 30px;
+			span {
+				font-size: 30px;
+			}
+		}
+		&__text {
+			font-size: 17px;
+		}
+	}
+	.consist {
+		.wrapper {
+			margin-bottom: 20px;
+			.room {
+				&__item {
+					min-width: 109px;
+					font-size: 16px;
+				}
+			}
+		}
+		img {
+			max-width: 370px;
+		}
+		&-slide {
+			&__text {
+				max-width: 362px;
+			}
+		}
+	}
+	.about {
+		.card {
+			img {
+				width: 50px;
+			}
+			&-info {
+				&__title {
+					font-size: 18px;
+				}
+				&__text {
+					font-size: 15px;
+				}
+			}
+		}
+	}
+	.types {
+		&__modal {
+			&-standart {
+				max-width: 450px;
+			}
+		}
+	}
+	.discount {
+		.section {
+			&__title {
+				font-size: 20px;
+			}
+			&__text {
+				font-size: 18px;
+				span {
+					font-size: 22px;
+				}
+			}
+		}
+		&__form {
+			max-width: 240px;
+			&-input {
+				height: 40px;
+			}
+		}
+	}
+	.regis {
+		.calc {
+			&-options {
+				.wrapper {
+					justify-content: center;
+					width: 100%;
+					flex-wrap: wrap;
+					max-width: 410px;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+	.footer {
+		&-info {
+			flex-wrap: wrap;
+			max-width: 350px;
+			.info {
+				padding: 8px 10px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.section {
+		padding: 30px 0;
+	}
+	.header {
+		.nav {
+			&__item {
+				display: none;
+				&:nth-child(3) {
+					display: block;
+				}
+			}
+		}
+	}
+	.hero {
+		background-position: center;
+		&__title {
+			font-size: 25px;
+			span {
+				font-size: 24px;
+			}
+		}
+		&__text {
+			font-size: 16px;
+		}
+	}
+	.consist {
+		.wrapper {
+			.room {
+				max-width: 400px;
+				&__item {
+					min-width: 80px;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.about {
+		.card {
+			&__img {
+				display: none;
+			}
+		}
+	}
+	.types {
+		.card {
+			&-item {
+				&__button {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	.discount {
+		.section {
+			&__title {
+				font-size: 18px;
+			}
+			&__text {
+				font-size: 16px;
+			}
+		}
+	}
+	.reviews {
+		.card {
+			max-width: 250px;
+			&-item {
+				&__title {
+					margin-top: 16px;
+				}
+				&__text {
+					line-height: 170%;
+				}
+			}
+		}
+	}
+	.regis {
+		.sidebar {
+			.order {
+				&__button {
+					max-width: 250px;
+				}
+			}
+		}
+	}
+	.footer {
+		font-size: 14px;
+		&:nth-child(2n) {
+			font-size: 12px;
+		}
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.section__title {
+		margin-bottom: 35px;
+	}
+	.container {
+		padding: 0 10px;
+	}
+	.hero {
+		&__title {
+			span {
+				font-size: 18px;
+			}
+		}
+	}
+}

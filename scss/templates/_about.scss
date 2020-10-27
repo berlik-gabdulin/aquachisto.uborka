@@ -1,0 +1,32 @@
+.about {
+    position: relative;
+    display: block;
+    background: $lightblue;
+    .card {
+        display: flex;
+        padding-bottom: 65px;
+        &:last-child {
+            padding-bottom: 0;
+        }
+        &-info {
+            margin-left: 60px;
+            &__title {
+                font-size: 24px;
+                font-weight: 800;
+                color: $blue;
+                padding-bottom: 8px;
+            }
+            &__text {
+                max-width: 810px;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 200%;
+            }
+
+        }
+        img {
+            width: 80px;
+        }
+       
+    }
+}
