@@ -179,28 +179,34 @@ $(document).ready(function () {
 
 	// Calc
 
-	$(
-		".calc-choice__row input, .calc-choice__row select, .calc-period__row input"
-	).click(function () {
+	var summary = 0;
+
+	$(".calc input, .calc select").click(function () {
 		if ($(this).attr("name") === "apart-type") {
 			$(".apart-type").text($(this).val());
 			$(".modal__form input[name=apart-type]").val($(this).val());
-    } 
-    
-    else if ($(this).attr("name") === "cleaning-type") {
+		} else if ($(this).attr("name") === "cleaning-type") {
 			$(".type").text($(this).val());
 			$(".modal__form input[name=type]").val($(this).val());
-    } 
-    
-    else if ($(this).attr("name") === "period") {
+		} else if ($(this).attr("name") === "period") {
 			$(".period").text($(this).val());
 			$(".modal__form input[name=period]").val($(this).val());
-    } 
-    
-    else if ($(this).attr("name") === "rooms") {
+		} else if ($(this).attr("name") === "rooms") {
 			$(".rooms").text($(this).val());
 			$(".modal__form input[name=rooms]").val($(this).val());
 		}
+
+		summary = 0;
+
+		[...document.querySelectorAll(".calc input:checked")].forEach(function (
+			item
+		) {
+			console.log(item);
+			summary = summary + Number($(item).attr("data-price"));
+		});
+
+		$(".price-title span").text(summary);
+		$(".modal__form input[name=summary]").val(summary);
 	});
 
 	$(".calc-options input").click(function () {
@@ -229,9 +235,36 @@ $(document).ready(function () {
 			order = "";
 			optionsArr.forEach(function (item) {
 				console.log($(item).val());
-        order = order + $(item).val() + "\n";
-        $('input[name=userOrder]').val(order);
+				order = order + $(item).val() + "\n";
+				$("input[name=userOrder]").val(order);
 			});
 		});
+	});
+
+	//E-mail Ajax Send
+	//Documentation & Example: https://github.com/agragregra/uniMail
+	$(".modal__form").submit(function () {
+		//Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize(),
+		}).done(function () {
+			// $(".popup").fadeOut();
+			// $("#popup__thanks").fadeIn().css("display", "flex");
+			setTimeout(function () {
+				// Done Functions
+				th.trigger("reset");
+				$(".popup-modal-dismiss").click();
+			}, 1000);
+			setTimeout(function () {
+				// Done Functions
+				// $(".popup").fadeOut();
+				console.log("Done");
+			}, 3000);
+			// fbPixelTrackID();
+		});
+		return false;
 	});
 });

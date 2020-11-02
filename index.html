@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Magnific Popup core CSS file -->
-    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="./css/magnific-popup.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"./>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"./>
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>Aqua-чисто | Профессиональная уборка квартир, домов, офисов и других помещений</title>
 </head>
 <body>
     <div class="header">
@@ -133,7 +133,7 @@
                <div class="wrapper">
                     <div class="card">
                         <div class="card__img">
-                            <img src="../image/verified.svg" alt="">
+                            <img src="./image/verified.svg" alt="">
                         </div>
                         <div class="card-info">
                             <div class="card-info__title"> Проверенные клинеры</div>
@@ -142,7 +142,7 @@
                     </div>
                     <div class="card">
                         <div class="card__img">
-                            <img src="../image/protection.svg" alt="">
+                            <img src="./image/protection.svg" alt="">
                         </div>
                         <div class="card-info">
                             <div class="card-info__title"> Безопасные моющие средства</div>
@@ -151,7 +151,7 @@
                     </div>
                     <div class="card">
                         <div class="card__img">
-                            <img src="../image/medal.svg" alt="">
+                            <img src="./image/medal.svg" alt="">
                         </div>
                         <div class="card-info">
                             <div class="card-info__title"> Профессиональное оборудование</div>
@@ -160,7 +160,7 @@
                     </div>
                     <div class="card">
                         <div class="card__img">
-                            <img src="../image/maintenance.svg" alt="">
+                            <img src="./image/maintenance.svg" alt="">
                         </div>
                         <div class="card-info">
                             <div class="card-info__title"> Гарантия качества</div>
@@ -169,7 +169,7 @@
                     </div>
                     <div class="card">
                         <div class="card__img">
-                            <img src="../image/24-hours.svg" alt="">
+                            <img src="./image/24-hours.svg" alt="">
                         </div>
                         <div class="card-info">
                             <div class="card-info__title"> Приезжаем в любое время</div>
@@ -244,7 +244,7 @@
                     </div>
                     <div class="card-item">
                         <div class="card-item__img">
-                            <img src="../image/group.svg" alt="">
+                            <img src="./image/group.svg" alt="">
                         </div>
                     </div>
                     <div class="card-item">
@@ -253,7 +253,7 @@
                     </div>
                     <div class="card-item">
                         <div class="card-item__img">
-                            <img src="../image/group.svg" alt="">
+                            <img src="./image/group.svg" alt="">
                         </div>
                     </div>
                     <div class="card-item">
@@ -261,7 +261,7 @@
                     </div>
                     <div class="card-item">
                         <div class="card-item__img">
-                            <img src="../image/group.svg" alt="">
+                            <img src="./image/group.svg" alt="">
                         </div>
                     </div>
                     <div class="card-item">
@@ -324,40 +324,38 @@
                     <div id="calc-choice" class="calc-choice">
                         <div class="calc__title calc-choice__title">Вы выбрали</div>
                         <div class="calc-choice__row">
-                            <input type="radio" name="apart-type" id="flat" checked value="Квартира" data-price="7000">
+                            <input type="radio" name="apart-type" id="flat" checked value="Квартира" data-price="0">
                             <label for="flat" class="button">Квартира</label>
-                            <input type="radio" name="apart-type" id="house" value="Дом" data-price="">
+                            <input type="radio" name="apart-type" id="house" value="Дом" data-price="0">
                             <label for="house" class="button">Дом</label>
-                            <input type="radio" name="apart-type" id="office" value="Офис">
+                            <input type="radio" name="apart-type" id="office" value="Офис" data-price="0">
                             <label for="office" class="button">Офис</label>
                         </div>
                         <div class="calc-choice__row">
-                            <select name="rooms" id="rooms" class="button">
+                            <select name="rooms" id="rooms" class="button" data-price="9000">
                                 <option value="1 комната" data-price="7000">1 комната</option>
                                 <option value="2 комнаты" data-price="9000" selected="selected">2 комнаты</option>
                                 <option value="3 комнаты" data-price="11000">3 комнаты</option>
-                                <!-- <option value="4 комнатная">4 комнатная</option>
-                                <option value="5 комнатная">5 комнатная</option> -->
                                 <option value="Более 3 комнат" data-price="13000">Более 3 комнат</option>
                             </select>
                         </div>
                         <div class="calc-choice__row">
-                            <input type="radio" name="cleaning-type" id="standart" checked value="Стандартная уборка">
+                            <input type="radio" name="cleaning-type" id="standart" checked value="Стандартная уборка" data-price="0">
                             <label for="standart" class="button">Стандартная уборка</label>
-                            <input type="radio" name="cleaning-type" id="general" value="Генеральная уборка">
+                            <input type="radio" name="cleaning-type" id="general" value="Генеральная уборка" data-price="0">
                             <label for="general" class="button">Генеральная уборка</label>
-                            <input type="radio" name="cleaning-type" id="after-repairs" value="Уборка после ремонта">
+                            <input type="radio" name="cleaning-type" id="after-repairs" value="Уборка после ремонта" data-price="0">
                             <label for="after-repairs" class="button">Уборка после ремонта</label>
                         </div>
                     </div>
                     <div class="calc-period">
                         <div class="calc__title calc-period__title">Периодичность уборки</div>
                         <div class="calc-period__row">
-                            <input type="radio" name="period" id="once" value="Один раз">
+                            <input type="radio" name="period" id="once" value="Один раз" data-price="0">
                             <label for="once" class="calc-period__item">Один раз</label>
-                            <input type="radio" name="period" id="every-week" checked value="Каждую неделю">
+                            <input type="radio" name="period" id="every-week" checked value="Каждую неделю" data-price="0">
                             <label for="every-week" class="calc-period__item">Каждую неделю</label>
-                            <input type="radio" name="period" id="every-two-weeks" value="Каждые две недели">
+                            <input type="radio" name="period" id="every-two-weeks" value="Каждые две недели" data-price="0">
                             <label for="every-two-weeks" class="calc-period__item">Каждые две недели</label>
                         </div>
                     </div>
@@ -368,7 +366,7 @@
                                 <input type="checkbox" name="window" id="window" value="Помыть окна" data-price="1500">
                                 <label for="window" class="calc-options__label">
                                     <div class="icon">
-                                        <img src="../image/window.svg" alt="">
+                                        <img src="./image/window.svg" alt="">
                                     </div>
                                     <div class="text">Помыть окна</div>
                                 </label>
@@ -378,7 +376,7 @@
                                 <input type="checkbox" name="glass-window" id="glass-window" value="Помыть витражи" data-price="5000">
                                 <label for="glass-window" class="calc-options__label">
                                     <div class="icon">
-                                        <img src="../image/stained-glass-window.svg" alt="">
+                                        <img src="./image/stained-glass-window.svg" alt="">
                                     </div>
                                     <div class="text">Помыть витражи</div>
                                 </label>
@@ -387,16 +385,16 @@
                                 <input type="checkbox" name="fridge" id="fridge" value="Помыть холодильник внутри" data-price="1500">
                                 <label for="fridge" class="calc-options__label">
                                     <div class="icon">
-                                        <img src="../image/fridge.svg" alt="">
+                                        <img src="./image/fridge.svg" alt="">
                                     </div>
                                     <div class="text">Помыть холодильник внутри</div>
                                 </label>
                             </div>
                             <div class="calc-options__item">
-                                <input type="checkbox" name="oven" id="oven" value="Почистить печь внутри">
+                                <input type="checkbox" name="oven" id="oven" value="Почистить печь внутри" data-price="1200">
                                 <label for="oven" class="calc-options__label">
                                     <div class="icon">
-                                        <img src="../image/oven-pngrepo-com.svg" alt="">
+                                        <img src="./image/oven-pngrepo-com.svg" alt="">
                                     </div>
                                     <div class="text">Почистить печь внутри</div>
                                 </label>
@@ -405,7 +403,7 @@
                                 <input type="checkbox" name="kitchen-cupboard" id="kitchen-cupboard" value="Убрать внутри кухонных шкафов" data-price="2000">
                                 <label for="kitchen-cupboard" class="calc-options__label">
                                     <div class="icon">
-                                        <img src="../image/outline.svg" alt="">
+                                        <img src="./image/outline.svg" alt="">
                                     </div>
                                     <div class="text">Убрать внутри кухонных шкафов</div>
                                 </label>
@@ -414,7 +412,7 @@
                                 <input type="checkbox" name="cupboard" id="cupboard" value="Убрать внутри шкафов" data-price="1000">
                                 <label for="cupboard" class="calc-options__label">
                                     <div class="icon">
-                                        <img src="../image/7077078.svg" alt="">
+                                        <img src="./image/7077078.svg" alt="">
                                     </div>
                                     <div class="text">Убрать внутри шкафов</div>
                                 </label>
@@ -423,7 +421,7 @@
                                 <input type="checkbox" name="chandelier" id="chandelier" value="Помыть люстру" data-price="1500">
                                 <label for="chandelier" class="calc-options__label">
                                     <div class="icon">
-                                        <img src="../image/chandelier.svg" alt="">
+                                        <img src="./image/chandelier.svg" alt="">
                                     </div>
                                     <div class="text">Помыть люстру</div>
                                 </label>
@@ -432,7 +430,7 @@
                                 <input type="checkbox" name="microwave-oven" id="microwave-oven" value="Почистить внутри микроволновки" data-price="800">
                                 <label for="microwave-oven" class="calc-options__label">
                                     <div class="icon">
-                                        <img src="../image/microwave-oven.svg" alt="">
+                                        <img src="./image/microwave-oven.svg" alt="">
                                     </div>
                                     <div class="text">Почистить внутри микроволновки</div>
                                 </label>
@@ -489,16 +487,17 @@
     <div class="modal mfp-hide" id="types-popup-modal">
         <div class="modal__dialog">
             <a class="popup-modal-dismiss" href="#">
-                <img src="../image/cancel.svg" alt="">
+                <img src="./image/cancel.svg" alt="">
             </a>
             <h4 class="modal__title">Заказать уборку</h4>
-            <form action="/" method="POST" class="modal__form">
+            <form action="./" method="POST" class="modal__form">
                 
                 <input type="hidden" name="apart-type" value="Квартира">
                 <input type="hidden" name="rooms" value="2 комнаты">
                 <input type="hidden" name="type" value="Стандартная уборка">
                 <input type="hidden" name="period" value="Каждую неделю">
                 <input type="hidden" name="userOrder" value="">
+                <input type="hidden" name="summary" value="9000">
 
                 <input class="modal__input" type="text" name="userName" id="userName__modal" placeholder="Имя">
                 <input class="modal__input" type="tel" name="userPhone" id="userPhone__modal" placeholder="Телефон">
@@ -511,7 +510,7 @@
     <!-- модальное окно для types с подробным -->
     <div class="types__modal-standart mfp-hide" id="types__modal-standart">
         <a class="popup-modal-dismiss" href="#">
-            <img src="../image/cancel.svg" alt="">
+            <img src="./image/cancel.svg" alt="">
         </a>
         <h3 class="title">Поддерживающая</h3>
         <ul class="type-list">
@@ -520,7 +519,7 @@
     </div>
     <div class="types__modal-standart mfp-hide" id="types__modal-general">
         <a class="popup-modal-dismiss" href="#">
-            <img src="../image/cancel.svg" alt="">
+            <img src="./image/cancel.svg" alt="">
         </a>
         <h3 class="title">Генеральная</h3>
         <ul class="type-list">
@@ -529,7 +528,7 @@
     </div>
     <div class="types__modal-standart mfp-hide" id="types__modal-afterRepair">
         <a class="popup-modal-dismiss" href="#">
-            <img src="../image/cancel.svg" alt="">
+            <img src="./image/cancel.svg" alt="">
         </a>
         <h3 class="title">После ремонта</h3>
         <ul class="type-list">
@@ -551,7 +550,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="/js/jquery.magnific-popup.js"></script>    
+    <script src="./js/jquery.magnific-popup.js"></script>    
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="js/input.mask.js"></script>
     <script type="text/javascript" src="js/PageScroll2id.min.js"></script>
