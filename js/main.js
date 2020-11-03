@@ -179,7 +179,70 @@ $(document).ready(function () {
 
 	// Calc
 
-	var summary = 0;
+	price = {
+		flat: {
+			single: {
+				standart: 7000,
+				general: 11000,
+				afterRepair: 15000,
+			},
+			double: {
+				standart: 9000,
+				general: 13000,
+				afterRepair: 19000,
+			},
+			triple: {
+				standart: 11000,
+				general: {
+					singleBathroom: 15000,
+					doubleBathroom: 17000,
+				},
+				afterRepair: {
+					singleBathroom: 23000,
+					doubleBathroom: 27000,
+				},
+			},
+		},
+		house: {
+			single: {
+				standart: 9000,
+				general: 15000,
+				afterRepair: 20000,
+			},
+			double: {
+				standart: 12000,
+				general: 18000,
+				afterRepair: 26000,
+			},
+			triple: {
+				standart: 15000,
+				general: {
+					singleBathroom: 21000,
+					doubleBathroom: 24000,
+				},
+				afterRepair: {
+					singleBathroom: 32000,
+					doubleBathroom: 37000,
+				},
+			},
+		},
+	};
+
+	var summary = 0,
+		basePrice = 9000,
+		apartType = "flat",
+		rooms = 2,
+		bathrooms = 1,
+		cleaningType = "standart",
+		apart = $(".apart-type__check input"),
+		rooms = $("#rooms"),
+		bathrooms = $("#bathrooms"),
+		cleaningType = $("cleaning-type__check input"),
+		calcPeriod = $(".calc-period__check input");
+
+	$(apart, rooms, bathrooms, cleaningType, calcPeriod).click(function (e) {
+		// var apartType = $(".apart-type__check input:checked").attr("data-type");
+	});
 
 	$(".calc input, .calc select").click(function () {
 		if ($(this).attr("name") === "apart-type") {
@@ -194,6 +257,9 @@ $(document).ready(function () {
 		} else if ($(this).attr("name") === "rooms") {
 			$(".rooms").text($(this).val());
 			$(".modal__form input[name=rooms]").val($(this).val());
+		} else if ($(this).attr("name") === "bathrooms") {
+			$(".bathrooms").text($(this).val());
+			$(".modal__form input[name=bathrooms]").val($(this).val());
 		}
 
 		summary = 0;
@@ -201,7 +267,7 @@ $(document).ready(function () {
 		[...document.querySelectorAll(".calc input:checked")].forEach(function (
 			item
 		) {
-			console.log(item);
+			// console.log(item);
 			summary = summary + Number($(item).attr("data-price"));
 		});
 

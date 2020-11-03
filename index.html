@@ -323,40 +323,46 @@
                 <div class="calc" id="place__order">
                     <div id="calc-choice" class="calc-choice">
                         <div class="calc__title calc-choice__title">Вы выбрали</div>
-                        <div class="calc-choice__row">
-                            <input type="radio" name="apart-type" id="flat" checked value="Квартира" data-price="0">
+                        <div class="calc-choice__row apart-type__check">
+                            <input type="radio" name="apart-type" id="flat" checked value="Квартира" data-type="flat">
                             <label for="flat" class="button">Квартира</label>
-                            <input type="radio" name="apart-type" id="house" value="Дом" data-price="0">
+                            <input type="radio" name="apart-type" id="house" value="Дом" data-type="house">
                             <label for="house" class="button">Дом</label>
-                            <input type="radio" name="apart-type" id="office" value="Офис" data-price="0">
+                            <input type="radio" name="apart-type" id="office" value="Офис" data-type="house">
                             <label for="office" class="button">Офис</label>
                         </div>
-                        <div class="calc-choice__row">
-                            <select name="rooms" id="rooms" class="button" data-price="9000">
-                                <option value="1 комната" data-price="7000">1 комната</option>
-                                <option value="2 комнаты" data-price="9000" selected="selected">2 комнаты</option>
-                                <option value="3 комнаты" data-price="11000">3 комнаты</option>
-                                <option value="Более 3 комнат" data-price="13000">Более 3 комнат</option>
+                        <div class="calc-choice__row rooms__check">
+                            <select name="rooms" id="rooms" class="button">
+                                <option value="1 комната" data-type-="single">1 комната</option>
+                                <option value="2 комнаты" data-type="double" selected="selected">2 комнаты</option>
+                                <option value="3 комнаты" data-type="triple">3 комнаты</option>
+                                <option value="Более 3 комнат" data-price="more">Более 3 комнат</option>
+                            </select>
+                            <select name="bathrooms" id="bathrooms" class="button">
+                                <option value="1 санузел" data-type="single" selected="selected">1 санузел</option>
+                                <option value="2 санузла и более" data-type="double">2 санузла и более</option>
                             </select>
                         </div>
-                        <div class="calc-choice__row">
-                            <input type="radio" name="cleaning-type" id="standart" checked value="Стандартная уборка" data-price="0">
+                        <div class="calc-choice__row cleaning-type__check">
+                            <input type="radio" name="cleaning-type" id="standart" checked value="Стандартная уборка" data-type="standart">
                             <label for="standart" class="button">Стандартная уборка</label>
-                            <input type="radio" name="cleaning-type" id="general" value="Генеральная уборка" data-price="0">
+                            <input type="radio" name="cleaning-type" id="general" value="Генеральная уборка" data-type="general">
                             <label for="general" class="button">Генеральная уборка</label>
-                            <input type="radio" name="cleaning-type" id="after-repairs" value="Уборка после ремонта" data-price="0">
+                            <input type="radio" name="cleaning-type" id="after-repairs" value="Уборка после ремонта" data-type="afterRepair">
                             <label for="after-repairs" class="button">Уборка после ремонта</label>
                         </div>
                     </div>
                     <div class="calc-period">
                         <div class="calc__title calc-period__title">Периодичность уборки</div>
-                        <div class="calc-period__row">
-                            <input type="radio" name="period" id="once" value="Один раз" data-price="0">
+                        <div class="calc-period__row calc-period__check">
+                            <input type="radio" name="period" id="once" value="Один раз" data-discount="0">
                             <label for="once" class="calc-period__item">Один раз</label>
-                            <input type="radio" name="period" id="every-week" checked value="Каждую неделю" data-price="0">
-                            <label for="every-week" class="calc-period__item">Каждую неделю</label>
-                            <input type="radio" name="period" id="every-two-weeks" value="Каждые две недели" data-price="0">
+                            <input type="radio" name="period" id="every-month" value="Раз в месяц" data-discount="10">
+                            <label for="every-month" class="calc-period__item">Раз в месяц</label>
+                            <input type="radio" name="period" id="every-two-weeks" value="Каждые две недели" data-discount="15">
                             <label for="every-two-weeks" class="calc-period__item">Каждые две недели</label>
+                            <input type="radio" name="period" id="every-week" checked value="Каждую неделю" data-discount="20">
+                            <label for="every-week" class="calc-period__item">Каждую неделю</label>
                         </div>
                     </div>
                     <div class="calc-options" >
@@ -444,6 +450,7 @@
                         <div class="wrapper">
                             <div class="apart-type">Квартира</div>
                             <div class="rooms">2 комнаты</div>
+                            <div class="bathrooms">1 санузел</div>
                             <div class="type">Стандартная уборка</div>
                             <div class="period">Каждую неделю</div>
                             <hr>
@@ -494,6 +501,7 @@
                 
                 <input type="hidden" name="apart-type" value="Квартира">
                 <input type="hidden" name="rooms" value="2 комнаты">
+                <input type="hidden" name="bathrooms" value="1 санузел">
                 <input type="hidden" name="type" value="Стандартная уборка">
                 <input type="hidden" name="period" value="Каждую неделю">
                 <input type="hidden" name="userOrder" value="">
