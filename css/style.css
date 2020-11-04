@@ -750,7 +750,7 @@ input {
       padding: 0 7px;
       box-sizing: border-box;
       cursor: pointer;
-      transition: .15s;
+      transition: 0.15s;
       outline: none; }
     .regis .calc-choice__row input {
       display: none; }
@@ -857,13 +857,32 @@ input {
         font-size: 14px;
         cursor: pointer;
         text-decoration: none;
-        transition: .15s; }
+        transition: 0.15s; }
         .regis .sidebar .order .wrapper .options__button:hover {
           background: #0076ab; }
-      .regis .sidebar .order .wrapper .price-title {
+      .regis .sidebar .order .wrapper .price__title {
         font-size: 24px;
         font-weight: 600;
         color: #056590; }
+      .regis .sidebar .order .wrapper .price__full {
+        display: inline-block;
+        position: relative;
+        margin-right: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #868686; }
+        .regis .sidebar .order .wrapper .price__full:after {
+          content: "";
+          display: block;
+          border-top: 2px solid #868686;
+          position: absolute;
+          top: 43%;
+          left: -5px;
+          transform: rotate(-8deg);
+          right: -5px; }
+      .regis .sidebar .order .wrapper .price__discount {
+        font-size: 20px;
+        color: #007500; }
     .regis .sidebar .order__button {
       display: flex;
       margin: 30px auto;
@@ -881,7 +900,7 @@ input {
       border: none;
       box-shadow: -6px 4px 11px rgba(0, 0, 0, 0.25);
       cursor: pointer;
-      transition: .15s; }
+      transition: 0.15s; }
       .regis .sidebar .order__button:hover {
         background: #0076ab; }
   .regis .sidebar .options__list {

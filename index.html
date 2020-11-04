@@ -324,7 +324,7 @@
                     <div id="calc-choice" class="calc-choice">
                         <div class="calc__title calc-choice__title">Вы выбрали</div>
                         <div class="calc-choice__row apart-type__check">
-                            <input type="radio" name="apart-type" id="flat" checked value="Квартира" data-type="flat">
+                            <input type="radio" name="apart-type" id="flat" value="Квартира" data-type="flat" checked>
                             <label for="flat" class="button">Квартира</label>
                             <input type="radio" name="apart-type" id="house" value="Дом" data-type="house">
                             <label for="house" class="button">Дом</label>
@@ -333,14 +333,13 @@
                         </div>
                         <div class="calc-choice__row rooms__check">
                             <select name="rooms" id="rooms" class="button">
-                                <option value="1 комната" data-type-="single">1 комната</option>
+                                <option value="1 комната" data-type="single">1 комната</option>
                                 <option value="2 комнаты" data-type="double" selected="selected">2 комнаты</option>
-                                <option value="3 комнаты" data-type="triple">3 комнаты</option>
-                                <option value="Более 3 комнат" data-price="more">Более 3 комнат</option>
+                                <option value="3 комнаты" data-type="triple">3 комнаты и более</option>
                             </select>
-                            <select name="bathrooms" id="bathrooms" class="button">
-                                <option value="1 санузел" data-type="single" selected="selected">1 санузел</option>
-                                <option value="2 санузла и более" data-type="double">2 санузла и более</option>
+                            <select name="bathrooms" id="bathrooms" class="button" style="display: none;">
+                                <option value="1 санузел" data-type="singleBathroom" selected="selected">1 санузел</option>
+                                <option value="2 санузла и более" data-type="doubleBathroom">2 санузла и более</option>
                             </select>
                         </div>
                         <div class="calc-choice__row cleaning-type__check">
@@ -357,11 +356,14 @@
                         <div class="calc-period__row calc-period__check">
                             <input type="radio" name="period" id="once" value="Один раз" data-discount="0">
                             <label for="once" class="calc-period__item">Один раз</label>
+
                             <input type="radio" name="period" id="every-month" value="Раз в месяц" data-discount="10">
                             <label for="every-month" class="calc-period__item">Раз в месяц</label>
+
                             <input type="radio" name="period" id="every-two-weeks" value="Каждые две недели" data-discount="15">
                             <label for="every-two-weeks" class="calc-period__item">Каждые две недели</label>
-                            <input type="radio" name="period" id="every-week" checked value="Каждую неделю" data-discount="20">
+                            
+                            <input type="radio" name="period" id="every-week" value="Каждую неделю" data-discount="20" checked>
                             <label for="every-week" class="calc-period__item">Каждую неделю</label>
                         </div>
                     </div>
@@ -450,7 +452,7 @@
                         <div class="wrapper">
                             <div class="apart-type">Квартира</div>
                             <div class="rooms">2 комнаты</div>
-                            <div class="bathrooms">1 санузел</div>
+                            <div class="bathrooms" style="display: none;">1 санузел</div>
                             <div class="type">Стандартная уборка</div>
                             <div class="period">Каждую неделю</div>
                             <hr>
@@ -466,7 +468,8 @@
                             </div>
                         </div>
                         <div class="wrapper">
-                            <div class="price-title">К оплате : <span>9000</span> тг</div>
+                            <div class="price__title">К оплате : <div class="price__full">9000</div><span>7200</span> тг.</div>
+                            <div class="price__discount" >Ваша скидка: <span>1800</span> тг.</div>
                         </div>
                         <a href="#types-popup-modal" class="order__button popup-modal__button">Заказать уборку</a>
                     </div>
@@ -505,7 +508,9 @@
                 <input type="hidden" name="type" value="Стандартная уборка">
                 <input type="hidden" name="period" value="Каждую неделю">
                 <input type="hidden" name="userOrder" value="">
+                <input type="hidden" name="fullPrice" value="9000">
                 <input type="hidden" name="summary" value="9000">
+                <input type="hidden" name="discount" value="0">
 
                 <input class="modal__input" type="text" name="userName" id="userName__modal" placeholder="Имя">
                 <input class="modal__input" type="tel" name="userPhone" id="userPhone__modal" placeholder="Телефон">

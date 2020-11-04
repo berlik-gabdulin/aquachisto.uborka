@@ -229,50 +229,99 @@ $(document).ready(function () {
 	};
 
 	var summary = 0,
-		basePrice = 9000,
-		apartType = "flat",
-		rooms = 2,
-		bathrooms = 1,
-		cleaningType = "standart",
-		apart = $(".apart-type__check input"),
-		rooms = $("#rooms"),
-		bathrooms = $("#bathrooms"),
-		cleaningType = $("cleaning-type__check input"),
-		calcPeriod = $(".calc-period__check input");
+		basePrice = price.flat.double.standart,
+		aprtType = "flat",
+		roomCnt = "double",
+		clningType = "standart",
+		bathroomCnt = "singleBathroom",
+		discount = 0;
+	// apartType = "flat",
+	// rooms = 2,
+	// bathrooms = 1,
+	// cleaningType = "standart",
+	// apart = $(".apart-type__check input"),
+	// rooms = $("#rooms"),
+	// bathrooms = $("#bathrooms"),
+	// cleaningType = $("cleaning-type__check input"),
+	// calcPeriod = $(".calc-period__check input");
 
-	$(apart, rooms, bathrooms, cleaningType, calcPeriod).click(function (e) {
+	// price.aprtType.roomCnt.clningType.bathroomCnt;
+
+	$(".calc").click(function (e) {
 		// var apartType = $(".apart-type__check input:checked").attr("data-type");
-	});
-
-	$(".calc input, .calc select").click(function () {
-		if ($(this).attr("name") === "apart-type") {
-			$(".apart-type").text($(this).val());
-			$(".modal__form input[name=apart-type]").val($(this).val());
-		} else if ($(this).attr("name") === "cleaning-type") {
-			$(".type").text($(this).val());
-			$(".modal__form input[name=type]").val($(this).val());
-		} else if ($(this).attr("name") === "period") {
-			$(".period").text($(this).val());
-			$(".modal__form input[name=period]").val($(this).val());
-		} else if ($(this).attr("name") === "rooms") {
-			$(".rooms").text($(this).val());
-			$(".modal__form input[name=rooms]").val($(this).val());
-		} else if ($(this).attr("name") === "bathrooms") {
-			$(".bathrooms").text($(this).val());
-			$(".modal__form input[name=bathrooms]").val($(this).val());
+		var target = e.target;
+		if ($(target).attr("name") === "apart-type") {
+			aprtType = $(target).data("type");
+			$(".apart-type").text($(target).val());
+			$(".modal__form input[name=apart-type]").val($(target).val());
 		}
 
-		summary = 0;
+		if ($(target).attr("name") === "rooms") {
+			roomCnt = $(target).find(":selected").data("type");
 
-		[...document.querySelectorAll(".calc input:checked")].forEach(function (
-			item
-		) {
-			// console.log(item);
-			summary = summary + Number($(item).attr("data-price"));
-		});
+			$(".modal__form input[name=rooms]").val($(target).val());
 
-		$(".price-title span").text(summary);
-		$(".modal__form input[name=summary]").val(summary);
+			if (roomCnt === "triple") {
+				$("#bathrooms, .bathrooms, .manager").fadeIn(0);
+			} else if (roomCnt === "single" || roomCnt === "double") {
+				$("#bathrooms, .bathrooms, .manager").fadeOut(0);
+				$(".modal__form input[name=bathrooms]").val("1 санузел");
+			}
+		}
+
+		if ($(target).attr("name") === "bathrooms") {
+			bathroomCnt = $(target).find(":selected").data("type");
+			$(".bathrooms").text($(target).val());
+			$(".modal__form input[name=bathrooms]").val($(target).val());
+			console.log("bathroomCnt: ", bathroomCnt);
+		}
+
+		if ($(target).attr("name") === "cleaning-type") {
+			clningType = $(target).data("type");
+			$(".type").text($(target).val());
+			$(".modal__form input[name=type]").val($(target).val());
+		}
+
+		if ($(target).attr("name") === "period") {
+			discount = $(target).data("discount");
+			$(".period").text($(target).val());
+			$(".modal__form input[name=period]").val($(target).val());
+		}
+
+		if (roomCnt === "triple" && clningType !== "standart") {
+			basePrice = price[aprtType][roomCnt][clningType][bathroomCnt];
+			console.log(price[aprtType][roomCnt][clningType][bathroomCnt]);
+		} else {
+			console.log(price[aprtType][roomCnt][clningType]);
+			basePrice = price[aprtType][roomCnt][clningType];
+		}
+
+		summary = basePrice;
+
+		[...document.querySelectorAll(".calc-options input:checked")].forEach(
+			function (item) {
+				// console.log(item);
+				summary = summary + Number($(item).attr("data-price"));
+			}
+		);
+
+		if (discount === 0) {
+			$(".price__title span").text(summary);
+			$(
+				".modal__form input[name=summary], .modal__form input[name=fullPrice]"
+			).val(summary);
+			$(".price__full, .price__discount").fadeOut(0);
+		} else {
+			discountVal = (summary / 100) * discount;
+			summaryWithDiscount = summary - discountVal;
+			$(".price__title span").text(summaryWithDiscount);
+			$(".modal__form input[name=fullPrice]").val(summary);
+			$(".modal__form input[name=summary]").val(summaryWithDiscount);
+			$(".modal__form input[name=discount]").val(discountVal);
+			$(".price__full").fadeIn(0).text(summary);
+			$(".price__discount").fadeIn(0);
+			$(".price__discount span").text(discountVal);
+		}
 	});
 
 	$(".calc-options input").click(function () {
